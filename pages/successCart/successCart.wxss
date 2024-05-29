@@ -1,0 +1,30 @@
+/* pages/successCart/successCart.wxss */
+.container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+.container image:first-child{
+	width: 500rpx;
+	height: 500rpx;
+}
+.container image:last-child{
+	width: 100rpx;
+	height: 100rpx;
+}
+.payButton{
+	position:absolute;
+	bottom:200rpx;
+	left: 250rpx;
+	width: 120px;
+	height: 50px;
+	display: block;	
+	background-color: red;
+	color: white;
+	font-size: 24px;
+	line-height: 50px;
+	border-radius: 20px;
+	text-align: center;
+}

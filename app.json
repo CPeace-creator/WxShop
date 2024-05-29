@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cartegory/cartgory",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/login/login",
+    "pages/comment/comment",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/register/register",
+    "pages/confirmCart/confirmCart",
+    "pages/successCart/successCart"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "嘉园购物小商城",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "static/images/ic_menu_choice_nor.png",
+        "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/cartegory/cartgory",
+      "iconPath": "static/images/ic_menu_sort_nor.png",
+      "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
+      "text": "分类"
+    },
+  
+    {
+      "pagePath": "pages/cart/cart",
+      "iconPath": "static/images/cart.png",
+      "selectedIconPath": "static/images/cart_c.png",
+      "text": "购物车"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "iconPath": "static/images/my.png",
+      "selectedIconPath": "static/images/my-c.png",
+      "text": "个人中心"
+    }]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

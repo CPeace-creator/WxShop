@@ -1,0 +1,118 @@
+/* pages/search/search.wxss */
+.history-box{
+    padding: 5px 5px;
+}
+/* .his-list{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.his-list {
+    margin-top: 20rpx; /* 设置历史列表与上方的间距 */
+}
+
+.his-item {
+    padding: 12rpx 20rpx; /* 设置历史项的内边距 */
+    border-bottom: 1px solid #eee; /* 添加底部边框线 */
+    display: flex; /* 使用 Flex 布局 */
+    justify-content: space-between; /* 左右对齐 */
+    align-items: center; /* 垂直居中 */
+}
+
+.his-item text {
+    font-size: 16rpx; /* 设置文字大小 */
+    color: #333; /* 设置文字颜色 */
+}
+
+/* 删除图标样式 */
+.delete-icon {
+    width: 20rpx; /* 设置删除图标宽度 */
+    height: 20rpx; /* 设置删除图标高度 */
+}
+.uni-tag{
+    margin-top: 5px;
+    margin: 0 5px;
+}
+.history-title{
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    font-size:12px;
+    border-bottom: 1px solid #efefef;
+}
+.history-title image{
+    margin-top: -2px;
+    width: 22px;
+    height: 22px;
+}
+.search-box{
+	position: sticky;
+	top:0;
+	background-color: #C00000;
+	z-index: 999;
+	width: 100%;
+}
+.goods_item{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 3xp;
+}
+.sugg-item{
+    font-size: 12px;
+    padding:13px 0;
+    border-bottom:1px solid #efefef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sugg-list{
+    padding:0 5px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top:0;
+    position:sticky;
+    z-index: 999;
+    width: 100%;
+    height: 40px;
+    background-color: red;
+  }
+  .left input{
+    position:absolute;
+    left: 45px;
+    top:5px;
+    /* margin-left: 20px; */
+    width: 70%;
+    height: 30px;
+    background-color: white;
+    
+  }
+  .left icon{
+    position:absolute;
+    left: 20px;
+    top:5px;
+    height: 30px;
+    background-color: white;
+    font-size: 25px;
+  }
+  .my{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.my image{
+    position:absolute;
+    width: 33px;
+    color: white;
+    top: -10px;
+    right: 5px;
+    height: 25px;
+}
+.my text{
+  color: white;
+  font-size: 12px;
+}

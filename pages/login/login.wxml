@@ -1,0 +1,41 @@
+<view>
+    <view class='bg-set'>
+    <view class='login'>
+        <view class='logo'>
+            <image src='/static/login.jpg'></image>
+        </view>
+        <view class='form'>
+            <input type="text" bindinput="inputAccount" value="{{ username }}" class='input' placeholder="请输入邮箱号" placeholder-class="placeholder" />
+        </view>
+        <view class='form' wx:if="{{ usernamelogin }}">
+            <input type='text' bindinput="inputPassword" value="{{ password }}" class='input' placeholder="请输入密码"  password placeholder-class="placeholder" />
+        </view>
+        <view class='form' wx:if="{{ codelogin }}">
+            <input type="digit" controlled="true" bindinput="inputCode" value="{{ code }}" class='codeinput' placeholder="请输入验证码" placeholder-class="placeholder" />
+            <view class="{{ disabled ? 'huoquzhong' : 'huoqu' }}" bindtap="get_code">{{ time }}{{ text }}</view>
+        </view>
+        <view class="error-message">{{ errorMessage }}</view>
+        <navigator class='forget' url="/pages/register/register">
+            立刻注册？
+        </navigator>
+        <checkbox-group bindchange="choose">
+            <view class='info1'>
+                <label class="radio">
+                    <checkbox value="{{ isCheck }}" color="#0066ff" style="float:left;transform:scale(0.7)" bind:tap="check" />
+                    <view style='float:left;' bindtap="showxieyi">我已阅读并同意</view>
+                    <view style='float:left;color:#0066ff;' bindtap="showxieyi">《用户协议》</view>
+                    <view style='float:left;color:#0066ff;' bindtap="showyinsi">《隐私政策》</view>
+                </label>
+            </view>
+        </checkbox-group>
+        <view class='btn'>
+            <view class='button {{ rtrues() }}' bindtap="login">登录</view>
+            <view class='desc' wx:if="{{ usernamelogin }}">验证码登录</view>
+            <view class='desc' wx:if="{{ !usernamelogin }}">手机密码登录</view>
+        </view>
+        <view class='footer'>
+            <view class='desc'>未注册的用户使用验证码登录自动注册</view>
+        </view>
+    </view>
+    </view>
+</view>

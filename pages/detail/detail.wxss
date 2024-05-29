@@ -1,0 +1,25 @@
+/* pages/detail/detail.wxss */
+
+.goods_item{
+	display: flex;
+	margin-right: 5px;
+	padding: 10px 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+    
+.pick{
+width: 100px;
+height: 100px;
+display: block;
+}
+.goods-item-right{
+display: flex;
+flex-direction: column;
+justify-content: space-between; }
+.goods-name{
+    font-size: 13px;
+}
+.goods_price{
+    font-size: 16px;
+    color:red;
+}      

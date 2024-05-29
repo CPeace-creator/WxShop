@@ -1,0 +1,9 @@
+<!--pages/successCart/successCart.wxml-->
+<view>
+	<view class="container">
+		<image src="/static/paySuccess2.png"></image>
+		<text>您已支付成功!</text>
+		<image src="/static/paySuccess.png"></image>
+	</view>
+	<view class="payButton" bindtap="returnIndex">返回首页</view>
+</view>

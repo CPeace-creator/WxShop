@@ -1,0 +1,23 @@
+<view>
+		<view class="goods_item">
+			<!-- 商品左侧区域 -->
+			<view class="goods-item-left">
+				<image src="{{goods.url || defaultPic}}" mode="" class="pick"></image>
+			</view>
+			<!-- 商品右侧区域 -->
+			<view class="goods-item-right">
+				<view class="goods-name">
+					{{goods.pb}}
+				</view>
+				<view class="goods-info-box">
+					<view class="goods_price">
+						¥{{goods.price}}
+					</view>
+				</view>
+                <navigator style="width: 50%; height: 50%;" url="/pages/comment/comment">
+                    <button style="margin-left:80px;">发表评论</button>
+                </navigator>
+			</view>
+		</view>
+        <rich-text nodes="{{goods.goods_introduce}}"></rich-text>
+	</view>

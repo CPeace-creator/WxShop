@@ -1,0 +1,123 @@
+/* pages/my/my.wxss */
+.top{
+  margin: 0px 50px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+.left image{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.right{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:5px;
+  flex-direction: column;
+}
+.right text:first-child{
+  font-size: 20px;
+  font-weight: 1000;
+}
+.right text:last-child{
+  font-size: 15px;
+  color:red;
+  font-weight: 1000;
+}
+.avator{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+.name image{
+
+  width: 20px;
+  height: 20px;
+}
+.avator image{
+  position: absolute;
+  left: -20px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  margin-top: -50px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.container-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.container-item  text{
+  font-weight: 1000;
+}
+.tools{
+  width: 100%;
+  display: flex;
+  margin-top: -50px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-top: 1px solid black;
+}
+.tools-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tools image{
+  width: 30px;
+  height: 30px;
+}
+.tools  text{
+  font-weight: 1000;
+}
+.service{
+  /* width: 80%; */
+  margin-top: 10px;
+  display: flex; 
+  /* width: 100%;
+  /* display: flex; */
+  justify-content: space-between;
+  flex-direction: column;
+}
+.service-top{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px;
+}
+.service-top text:first-child{
+  font-weight: 1000;
+}
+.service-botom{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tools-item2{
+  display: flex;
+
+  flex-direction: column;
+}
+.tools-item2 image{
+  width: 70px;
+  height: 60px;
+}

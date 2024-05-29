@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="service-policy">
+    <view class="item">30天无忧退货</view>
+    <view class="item">48小时快速退款</view>
+    <view class="item">满88元免邮费</view>
+  </view>
+  <view class="no-cart" wx:if="{{cartList.length <= 0}}">
+    <view class="c">
+      <view class="title-box">
+        购物车空空如也～
+      </view>
+      <view class="to-index-btn" bindtap="toIndexPage">
+        去逛逛
+      </view>
+    </view>
+  </view>
+  <view class="cart-view" wx:if="{{cartList.length > 0}}">
+    <view class="list">
+      <view class="group-item">
+        <view class="goods">
+          <view class="item {{isEditCart ? 'edit' : ''}}" wx:for="{{cartList}}" wx:key="{{item.id}}">
+            <view class="checkbox {{item.checked ? 'checked' : ''}}" bindtap="checkedItem" data-item-index="{{item}}"></view>
+            <view class="cart-goods">
+              <image class="img" src="{{item.url}}"></image>
+              <view class="info">
+                <view class="t">
+                  <text class="name">{{item.name}}</text>
+                  <text class="num">x{{item.number}}</text>
+                </view>
+                <view class="attr">{{ isEditCart ? '已选择:' : ''}}{{item.goods_specifition_name_value||''}}</view>
+                <view class="b">
+                  <text class="price">{{item.price}}</text>
+                  <view class="selnum">
+                    <view class="cut" bindtap="cutNumber" data-item-index="{{item}}">-</view>
+                    <input value="{{item.number}}" class="number" disabled="true" type="number" />
+                    <view class="add" bindtap="addNumber" data-item-index="{{item}}">+</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cart-bottom">
+      <view class="total">￥{{checkedGoodsAmount}}</view>
+      <view class="checkout" style="float: left;" bindtap="checkoutOrder" wx:if="{{!isEditCart}}">下单</view>
+    </view>
+  </view>
+</view>

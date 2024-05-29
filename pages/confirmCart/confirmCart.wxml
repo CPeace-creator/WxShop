@@ -1,0 +1,23 @@
+<!--pages/confirmCart/confirmCart.wxml-->
+<view>
+	<view style="width: 100%;height: 10px;margin-top:10px;background-color: #D7DAD7;">
+	</view>
+	<input class="weui-input" focus="{{focus}}" placeholder="请输入购买地址" bindinput="checkAddress" value="{{address}}"  	placeholder-style="color:#F76260"/>
+	<input type="text" auto-focus placeholder="请输入收件人姓名" bindinput="checkName" value="{{name}}"/>
+	<input type="text" auto-focus placeholder="请输入收件人手机号码" bindinput="checkPhone" value="{{phone}}"/>
+	<view style="width: 100%;height: 10px;margin-top:10px;background-color: #D7DAD7;">
+	</view>
+	<view class="pay" wx:for="{{payList}}" wx:key="index">
+		<view class="pay-left">
+			<image src="{{item.url}}"></image>
+			<view>{{item.name}}</view>
+		</view>
+		<view class="checkbox {{item.isChecked ? 'checked' : ''}}" bindtap="checkedItem" data-index="{{item}}"></view>
+	</view>
+	<view class="button">
+		<text style="color: red;font-size: 24px;font-weight: 1000;">
+		合计:￥{{checkedGoodsAmount}}
+		</text>
+		<view class="payButton" type="warn" bindtap="pay">确认支付-></view>
+	</view>
+</view>

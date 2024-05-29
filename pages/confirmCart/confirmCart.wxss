@@ -1,0 +1,58 @@
+/* pages/confirmCart/confirmCart.wxss */
+
+input{
+	width: 80%;
+	height: 50px;
+	border-bottom: 1px solid green;
+	margin: 5px 0 0 35px;
+}
+.checkbox {
+	float: left;
+	height: 34rpx;
+	width: 34rpx;
+	margin: 65rpx 18rpx 65rpx 26rpx;
+	background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-0e09baa37e.png) no-repeat;
+	background-size: 34rpx;
+}
+.checkbox.checked {
+	background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-checked-822e54472a.png) no-repeat;
+	background-size: 34rpx;
+}
+.pay{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #D7DAD7;
+}
+.pay-left{
+	width: 50%;
+	display: flex;
+	justify-content: center
+	;
+	align-items: center;
+}
+.pay image{
+	width: 66rpx;
+	height: 66rpx;
+	margin-right: 5px;
+}
+.button{
+	display:flex;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+}
+.payButton{
+	position:absolute;
+	top:20px;
+	right: 20px;
+	width: 120px;
+	height: 50px;
+	display: block;	
+	background-color: red;
+	color: white;
+	font-size: 22px;
+	line-height: 50px;
+	border-radius: 20px;
+}

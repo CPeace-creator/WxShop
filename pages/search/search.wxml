@@ -1,0 +1,36 @@
+<view>
+    <view class="search-box">
+    <view class="top">
+    <view class="left">
+    <icon class="iconfont icon-sousuo1"></icon>
+    <input class="search" placeholder="请输入搜索商品信息" bindinput="input" style="border-radius: 5px 10px 5px 10px;"></input>
+    </view>
+    <view class="my">
+      <image src="/static/我的.png" mode=""/>
+      <text></text>
+    </view>
+  </view>
+    </view>
+    <view class="sugg-list">
+        <!-- 循环渲染搜索结果 -->
+        <view class="sugg-item" wx:for="{{searchList}}" wx:key="index" bindtap="goToDetail" data-index="{{item}}">
+            <view class="goods_item">
+                {{item.pb}}
+            </view>
+        </view>
+        <!-- 历史搜索数据 -->
+        <view class="history-box" wx:if="{{searchList.length==0}}">
+            <view class="history-title">
+                <text>搜索历史</text>
+                <image src="/static/clear.png" mode="" bind:tap="clear"/>
+            </view>
+        <view class="his-list">
+            <view class="his-item" wx:for="{{historyList}}" wx:key="index">
+                <text bind:tap="clickText" data-index="{{item}}">{{item}}</text>
+                <!-- 添加删除图标 -->
+                <image class="delete-icon" src="/static/clear.png" bindtap="deleteItem" data-index="{{index}}"></image>
+            </view>
+         </view>
+        </view>
+    </view>
+</view>

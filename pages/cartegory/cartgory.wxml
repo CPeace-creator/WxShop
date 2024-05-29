@@ -1,0 +1,27 @@
+<view class="scroll-view-container">
+    <scroll-view  class="left-scroll-view" scroll-y="true" style="height: {{wh}}px;">
+    <block wx:for="{{cateList}}" wx:key="index">
+        <view class="left-croll-view-item,{{index === active ? 'active' : ''}}" bind:tap="changeActive" data-index="{{index}}">
+        {{item.cat_name}}
+        </view>
+    </block>
+    </scroll-view>
+    <scroll-view class="right-scroll-view" scroll-y="true" style="height: {{wh}}px;" scroll-top="{{scrollTop}}">
+    <view class="left-croll-view-item" wx:for="{{cateLevel2List}}" wx:key="index">
+        <!-- 二级 -->
+        <view class="cate-level-title">{{item.cat_name}}</view>
+        <!-- 三级 -->
+        <view class="cate-level3">
+            <view class="cate-level3-title" wx:for="{{item.children}}" wx:key="index">
+                <image src="{{item.url}}" mode="widthFix"></image>
+                <text>{{item.cat_name}}</text>
+            </view>
+            <view class="cate-3">
+                <view class="cate" wx:for="{{item.children}}" wx:key="index" wx:if="{{item.cat_name!=='常用分类'}}">
+                <image src="{{item.url}}" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,25 @@
+.music-container{
+    position: relative;
+    top: 5rpx;
+    color:#fff;
+    z-index: 99999;
+  }
+  .music image{
+    width:100rpx;
+    height:100rpx;
+  }
+   
+  .move{
+    transform-origin: center center;
+    animation: myMove 4s linear infinite;
+    -webkit-animation: myMove 4s linear infinite;
+  }
+  @keyframes myMove{
+    0%{transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+    
+  }
+  @-webkit-keyframes myMove{
+    0%{transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }

@@ -1,0 +1,31 @@
+<view>
+  <view class="top">
+    <bgm/>
+    <view class="left" bind:tap="goToSearch">
+      <!-- <icon class="iconfont icon-sousuo1"></icon> -->
+    <input class="search" placeholder="点击查询商品信息" auto-focus="true" style="border-radius: 5px 10px 5px 10px;"></input>
+    </view>
+    <navigator url="/pages/login/login">
+        <view class="my">
+        <image src="/static/我的.png" mode=""/>
+        </view>
+    </navigator>
+  </view>
+  <view class="item" wx:for="{{itemList}}" wx:key="{{item.id}}">
+    <view class="item-left">
+    <navigator url="/pages/detail/detail?id={{item.id}}">
+        <image src="{{item.url}}"></image>
+    </navigator>
+    </view>
+    <view class="item-right">
+    <text>{{item.name}}</text>
+    <text>¥{{item.price || formatPrice}}</text>
+    <view class="pl">
+      <text style="font-size: 10px;">{{item.priceT}}</text>
+      <icon class="iconfont icon-gouwuche" bind:tap="addCart" data-index="{{item}}"></icon>
+    </view>
+    <text>{{item.priceM}}</text>
+    </view>
+  </view>
+
+</view>

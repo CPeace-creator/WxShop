@@ -1,0 +1,73 @@
+<!--pages/my/my.wxml-->
+<view>
+  <view class="top">
+    <view class="left">
+      <image src="/static/images/my/my.jpg" background-size="cover"></image>
+    </view>
+    <view class="right">
+      <view class="name">
+        <text>彭于晏</text>
+        <navigator url="/pages/login/login" bind:tap="loginOut">
+            <image src="/static/images/my/登出.png"></image>
+        </navigator>
+      </view>
+      <view class="avator">
+        <image src="/static/images/my/VIP.png"></image>
+        <text>超级PLUS会员京东享值9999</text>
+      </view>
+    </view>
+  </view>
+  <view class="container">
+    <view class="container-item">
+      <text>359</text>
+      <text>店铺关注</text>
+    </view>
+    <view class="container-item">
+      <text>198</text>
+      <text>商品关注</text>
+    </view>
+    <view class="container-item">
+      <text>60</text>
+      <text>喜欢的内容</text>
+    </view>
+    <view class="container-item">
+      <text>233</text>
+      <text>浏览记录</text>
+    </view>
+  </view>
+  <view class="tools">
+    <view class="tools-item">
+      <image src="/static/images/my/01.png"></image>
+      <text>代付款</text>
+    </view>
+    <view class="tools-item">
+      <image src="/static/images/my/02.png"></image>
+      <text>待收货</text>
+    </view>
+    <view class="tools-item">
+      <image src="/static/images/my/03.png"></image>
+      <text>待评价</text>
+    </view>
+    <view class="tools-item">
+      <image src="/static/images/my/04.png"></image>
+      <text>退款/售后</text>
+    </view>
+    <view class="tools-item">
+      <image src="/static/images/my/05.png"></image>
+      <text>我的订单</text>
+    </view>
+  </view>
+  <view class="service">
+    <view class="service-top">
+      <text>工具与服务</text>
+      <text>查看更多></text>
+    </view>
+    <view class="service-botom">
+    <view class="tools-item2" wx:for="{{serviceList}}">
+      <image src="{{item.url}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  </view>
+  
+</view>

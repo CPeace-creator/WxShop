@@ -1,0 +1,6 @@
+<!-- 背景音乐组件 -->
+<view class="music-container">
+  <view class="music" catchtap="tigger">
+    <image  class="img {{is_on?'move':''}}" src="/static/music.png" style="width:90rpx;height:90rpx;"></image>
+  </view>
+</view>
