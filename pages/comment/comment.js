@@ -17,10 +17,10 @@ Page({
     onLoad:function(){
         createStoreBindings(this,{
             store: login,
-            fields: ['username','password']
+            fields: ['accounts']
           })
           this.setData({
-              'newComment.author':login.username
+              'newComment.author':wx.getStorageSync('username')
           })
     },
   
@@ -64,7 +64,7 @@ Page({
   
       this.setData({
         comments: [...this.data.comments, commentWithDate],
-        newComment: { author: '', text: '' },
+        newComment: { author: wx.getStorageSync('username'), text: '' },
         showCommentPopup: false // Close the popup after adding comment
       });
     }

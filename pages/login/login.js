@@ -71,6 +71,8 @@ Page({
         wx.switchTab({
           url: '/pages/index/index' // 进入首页的路径
         });
+        login.addAccount(this.data.account,this.data.password)
+        wx.setStorageSync('username', this.data.account)
       } else {
         // 账号密码不匹配，显示错误信息
         this.setData({
